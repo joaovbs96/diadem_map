@@ -1,35 +1,116 @@
+<!DOCTYPE html>
 <html>
 
 <head>
+
+  <title>CRS.Simple example - Leaflet</title>
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />
+
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
     integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
     crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+    integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+    crossorigin=""></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+  <style>
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+    }
+
+    #map {
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+
+
 </head>
 
-<style>
-  #mapid {
-    height: 180px;
-  }
-</style>
-
-<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
-  integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
-  crossorigin=""></script>
-
 <body>
-  <div id="mapid"></div>
-</body>
 
-<script>
-  var mymap = L.map('mapid').setView([51.505, -0.09], 13);
-  L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
-    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-    maxZoom: 18,
-    id: 'mapbox/streets-v11',
-    tileSize: 512,
-    zoomOffset: -1,
-    accessToken: 'your.mapbox.access.token'
-  }).addTo(mymap);
-</script>
+  <script src="https://img.finalfantasyxiv.com/lds/pc/global/js/eorzeadb/loader.js?v2"></script>
+
+  <div class="row" style="height: 100%;">
+    <div class="col-sm-6" style="background-color:white; height: 100%;">
+      <div id='map'></div>
+    </div>
+    <div class="col-sm-6" style="background-color:white;">
+      <div id='sidebar'>
+        <select class="custom-select">
+          <option selected>Gatherer Class</option>
+          <option value="1">Miner</option>
+          <option value="2">Botanist</option>
+          <!--<option value="3">Fisher</option>-->
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function loadJSON(callback) {
+
+      var xobj = new XMLHttpRequest();
+      xobj.overrideMimeType("application/json");
+      xobj.open('GET', 'node_data.json', true); // Replace 'my_data' with the path to your file
+      xobj.onreadystatechange = function () {
+        if (xobj.readyState == 4 && xobj.status == "200") {
+          // Required use of an anonymous callback as .open will NOT return a value but simply returns undefined in asynchronous mode
+          callback(xobj.responseText);
+        }
+      };
+      xobj.send(null);
+    }
+
+    var map = L.map('map', {
+      crs: L.CRS.Simple,
+      minZoom: 5,
+      maxZoom: 10
+    });
+
+    var bounds = [[1, 1], [42, 42]];
+    var image = L.imageOverlay('diadem.png', bounds).addTo(map);
+
+    map.fitBounds(bounds);
+
+    loadJSON(function (response) {
+      // Parse JSON string into object
+      var nData = JSON.parse(response);
+      for (i = 0; i < nData.nodes.length; i++) {
+        var node = nData.nodes[i];
+        var marker = L.marker([43 - node.pos.y, node.pos.x]);
+        marker.on('dblclick', function (e) {
+          //document.getElementById("sidebar").innerHTML = "someContent";
+          console.log("(x: ", e.latlng.lng, ", y:", 42 - e.latlng.lat + 1, ")");
+        });
+        marker.addTo(map);
+      }
+    });
+
+    map.on('dblclick', function (e) {
+      //var marker = L.marker(e.latlng);
+      //marker.on();
+      // marker.addTo(map);
+      //var newNode = new Node(e.latlng);
+      console.log("(x: ", e.latlng.lng, ", y:", 42 - e.latlng.lat + 1, ")");
+    });
+
+
+
+  </script>
+
+
+
+</body>
 
 </html>
