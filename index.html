@@ -16,7 +16,8 @@
   <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
     integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
     crossorigin=""></script>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
@@ -32,6 +33,12 @@
       width: 100%;
       height: 100%;
     }
+
+    .leaflet-container {
+      background-image: url("background.png");
+      background-size: cover;
+      outline: 0;
+    }
   </style>
 
 
@@ -42,27 +49,101 @@
   <script src="https://img.finalfantasyxiv.com/lds/pc/global/js/eorzeadb/loader.js?v2"></script>
 
   <div class="row" style="height: 100%;">
-    <div class="col-sm-6" style="background-color:white; height: 100%;">
+    <div class="col-sm-6" style="background-color: #444444; height: 100%;">
       <div id='map'></div>
     </div>
-    <div class="col-sm-6" style="background-color:white;">
+    <div class="col-sm-6" style="background-color: #444444; color: #ffffff;">
       <div id='sidebar'>
-        <select class="custom-select">
-          <option selected>Gatherer Class</option>
-          <option value="1">Miner</option>
-          <option value="2">Botanist</option>
-          <!--<option value="3">Fisher</option>-->
-        </select>
+        <table class="table">
+          <tbody id="table-body">
+            Test
+          </tbody>
+        </table>
       </div>
     </div>
   </div>
 
+
   <script>
-    function loadJSON(callback) {
+    // custom markers
+    var btnIcon = L.icon({
+      iconUrl: 'markers/botanist.png',
+      shadowUrl: 'markers/shadow.png',
+
+      iconSize: [38, 38], // size of the icon
+      shadowSize: [1, 1], // size of the shadow
+    });
+
+    var minIcon = L.icon({
+      iconUrl: 'markers/miner.png',
+      shadowUrl: 'markers/shadow.png',
+
+      iconSize: [38, 38], // size of the icon
+      shadowSize: [1, 1], // size of the shadow
+    });
+
+    var fshIcon = L.icon({
+      iconUrl: 'markers/fisher.png',
+      shadowUrl: 'markers/shadow.png',
+
+      iconSize: [38, 38], // size of the icon
+      shadowSize: [1, 1], // size of the shadow
+    });
+
+    var harIcon = L.icon({
+      iconUrl: 'markers/harvesting.png',
+      shadowUrl: 'markers/shadow.png',
+
+      iconSize: [38, 38], // size of the icon
+      shadowSize: [1, 1], // size of the shadow
+    });
+
+    var logIcon = L.icon({
+      iconUrl: 'markers/logging.png',
+      shadowUrl: 'markers/shadow.png',
+
+      iconSize: [38, 38], // size of the icon
+      shadowSize: [1, 1], // size of the shadow
+    });
+
+    var mngIcon = L.icon({
+      iconUrl: 'markers/mining.png',
+      shadowUrl: 'markers/shadow.png',
+
+      iconSize: [38, 38], // size of the icon
+      shadowSize: [1, 1], // size of the shadow
+    });
+
+    var quaIcon = L.icon({
+      iconUrl: 'markers/quarrying.png',
+      shadowUrl: 'markers/shadow.png',
+
+      iconSize: [38, 38], // size of the icon
+      shadowSize: [1, 1], // size of the shadow
+    });
+
+  </script>
+
+  <script>
+    dMarker = L.Marker.extend({
+      options: {
+        items: [],
+        pos: {
+          x: 0,
+          y: 0
+        },
+        nodeType: "",
+        category: ""
+      }
+    });
+  </script>
+
+  <script>
+    function loadJSON(callback, filename) {
 
       var xobj = new XMLHttpRequest();
       xobj.overrideMimeType("application/json");
-      xobj.open('GET', 'node_data.json', true); // Replace 'my_data' with the path to your file
+      xobj.open('GET', filename, true); // Replace 'my_data' with the path to your file
       xobj.onreadystatechange = function () {
         if (xobj.readyState == 4 && xobj.status == "200") {
           // Required use of an anonymous callback as .open will NOT return a value but simply returns undefined in asynchronous mode
@@ -83,19 +164,84 @@
 
     map.fitBounds(bounds);
 
+    var nData = JSON.parse("{}");
     loadJSON(function (response) {
       // Parse JSON string into object
-      var nData = JSON.parse(response);
+      nData = JSON.parse(response);
       for (i = 0; i < nData.nodes.length; i++) {
         var node = nData.nodes[i];
-        var marker = L.marker([43 - node.pos.y, node.pos.x]);
-        marker.on('dblclick', function (e) {
-          //document.getElementById("sidebar").innerHTML = "someContent";
-          console.log("(x: ", e.latlng.lng, ", y:", 42 - e.latlng.lat + 1, ")");
+        var marker = new dMarker([43 - node.pos.y, node.pos.x], node);
+        marker.on('click', function (e) {
+          var htmlContent = "";
+
+          // node header
+          htmlContent += '<h3 style="display: flex; align-items: center;">';
+          if (this.options.nodeType.localeCompare("botanist") == 0) {
+            htmlContent += '<img src="markers/botanist.png" style="height: 2em;">\n';
+            htmlContent += "Botanist Node";
+          } else if (this.options.nodeType.localeCompare("miner") == 0) {
+            htmlContent += '<img src="markers/miner.png" style="height: 2em;">\n';
+            htmlContent += "Miner Node";
+          } else {
+            htmlContent += '<img src="markers/fisher.png" style="height: 2em;">\n';
+            htmlContent += "Fishing Hole";
+          }
+          htmlContent += "</h3>";
+
+          // node contents
+          htmlContent += '<table class="table">\n';
+          htmlContent += '<tbody>\n';
+          for (j = 0; j < 8; j++) {
+            htmlContent += '<tr valign="center">\n';
+            htmlContent += '<th scope="row">\n';
+            if (this.options.items[j].id != null)
+              htmlContent += '<img src="icons/' + this.options.items[j].id + '.png">\n';
+            else
+              htmlContent += '<img src="icons/empty_slot.png">\n';
+            htmlContent += '</th">\n';
+
+            htmlContent += '<td>';
+            if (this.options.items[j].id != null)
+              htmlContent += "<h5>" + this.options.items[j].data.Name_en + "</h5>";
+            else
+              htmlContent += "<h5>" + 'Nothing' + "</h5>";
+            htmlContent += '</td>\n';
+
+            htmlContent += '</tr>\n';
+          }
+          htmlContent += '</tbody>\n';
+          htmlContent += '</table>\n';
+
+          document.getElementById("sidebar").innerHTML = htmlContent;
+          console.log("(x: ", this.options.pos.x, ", y:", this.options.pos.y, ")");
         });
+
+        switch (node.category) {
+          case "mining":
+            marker.setIcon(mngIcon);
+            break;
+          case "quarrying":
+            marker.setIcon(quaIcon);
+            break;
+          case "harvesting":
+            marker.setIcon(harIcon);
+            break;
+          case "logging":
+            marker.setIcon(logIcon);
+            break;
+          default:
+            if (node.nodeType.localeCompare("botanist") == 0) {
+              marker.setIcon(btnIcon);
+            } else if (node.nodeType.localeCompare("miner") == 0) {
+              marker.setIcon(minIcon);
+            } else {
+              marker.setIcon(fshIcon);
+            }
+        }
+
         marker.addTo(map);
       }
-    });
+    }, 'node_data.json');
 
     map.on('dblclick', function (e) {
       //var marker = L.marker(e.latlng);

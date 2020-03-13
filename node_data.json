@@ -8,14 +8,86 @@
       "nodeType": "miner",
       "category": "mining",
       "items": [
-        29896,
-        29909,
-        29919,
-        29929,
-        29939,
-        null,
-        null,
-        null
+        {
+          "id": 29896,
+          "data": {
+            "Icon": "/i/021000/021209.png",
+            "Name_de": "Genist-Kupfererz",
+            "Name_en": "Grade 2 Skybuilders' Ore",
+            "Name_fr": "Minerai de restauration (2e phase)",
+            "Name_ja": "第二次復興用の銅鉱"
+          }
+        },
+        {
+          "id": 29909,
+          "data": {
+            "Icon": "/i/021000/021216.png",
+            "Name_de": "Genist-Koboldeisenerz",
+            "Name_en": "Grade 2 Skybuilders' Cobalt Ore",
+            "Name_fr": "Minerai de cobalt de restauration (2e phase)",
+            "Name_ja": "第二次復興用の鏡鉄鉱"
+          }
+        },
+        {
+          "id": 29919,
+          "data": {
+            "Icon": "/i/021000/021208.png",
+            "Name_de": "Genist-Mythriterz",
+            "Name_en": "Grade 2 Skybuilders' Mythrite Ore",
+            "Name_fr": "Minerai de mithrite de restauration (2e phase)",
+            "Name_ja": "第二次復興用の精霊銀鉱"
+          }
+        },
+        {
+          "id": 29929,
+          "data": {
+            "Icon": "/i/021000/021205.png",
+            "Name_de": "Genist-Dunkelstahlerz",
+            "Name_en": "Grade 2 Skybuilders' Darksteel Ore",
+            "Name_fr": "Minerai de sombracier de restauration (2e phase)",
+            "Name_ja": "第二次復興用の闇鉄鉱"
+          }
+        },
+        {
+          "id": 29939,
+          "data": {
+            "Icon": "/i/021000/021224.png",
+            "Name_de": "Genist-Edelerz",
+            "Name_en": "Grade 2 Artisanal Skybuilders' Cloudstone",
+            "Name_fr": "Minerai sur commande de restauration (2e phase)",
+            "Name_ja": "第二次復興用の特注鉱石"
+          }
+        },
+        {
+          "id": null,
+          "data": {
+            "Icon": "",
+            "Name_de": "",
+            "Name_en": "",
+            "Name_fr": "",
+            "Name_ja": ""
+          }
+        },
+        {
+          "id": null,
+          "data": {
+            "Icon": "",
+            "Name_de": "",
+            "Name_en": "",
+            "Name_fr": "",
+            "Name_ja": ""
+          }
+        },
+        {
+          "id": null,
+          "data": {
+            "Icon": "",
+            "Name_de": "",
+            "Name_en": "",
+            "Name_fr": "",
+            "Name_ja": ""
+          }
+        }
       ]
     },
     {
@@ -26,14 +98,86 @@
       "nodeType": "botanist",
       "category": "clouded mature tree",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        29944,
-        null,
-        null
+        {
+          "id": null,
+          "data": {
+            "Icon": "",
+            "Name_de": "",
+            "Name_en": "",
+            "Name_fr": "",
+            "Name_ja": ""
+          }
+        },
+        {
+          "id": null,
+          "data": {
+            "Icon": "",
+            "Name_de": "",
+            "Name_en": "",
+            "Name_fr": "",
+            "Name_ja": ""
+          }
+        },
+        {
+          "id": null,
+          "data": {
+            "Icon": "",
+            "Name_de": "",
+            "Name_en": "",
+            "Name_fr": "",
+            "Name_ja": ""
+          }
+        },
+        {
+          "id": null,
+          "data": {
+            "Icon": "",
+            "Name_de": "",
+            "Name_en": "",
+            "Name_fr": "",
+            "Name_ja": ""
+          }
+        },
+        {
+          "id": null,
+          "data": {
+            "Icon": "",
+            "Name_de": "",
+            "Name_en": "",
+            "Name_fr": "",
+            "Name_ja": ""
+          }
+        },
+        {
+          "id": 29944,
+          "data": {
+            "Icon": "/i/022000/022422.png",
+            "Name_de": "Genist-Sturmseelenscheit",
+            "Name_en": "Grade 2 Skybuilders' Umbral Galewood Log",
+            "Name_fr": "Rondin de bois des vents évanescents de restauration (2e phase)",
+            "Name_ja": "第二次復興用の幻風木"
+          }
+        },
+        {
+          "id": null,
+          "data": {
+            "Icon": "",
+            "Name_de": "",
+            "Name_en": "",
+            "Name_fr": "",
+            "Name_ja": ""
+          }
+        },
+        {
+          "id": null,
+          "data": {
+            "Icon": "",
+            "Name_de": "",
+            "Name_en": "",
+            "Name_fr": "",
+            "Name_ja": ""
+          }
+        }
       ]
     },
     {
@@ -44,14 +188,86 @@
       "nodeType": "botanist",
       "category": "harvesting",
       "items": [
-        29895,
-        29907,
-        29916,
-        29926,
-        29936,
-        null,
-        null,
-        null
+        {
+          "id": 29895,
+          "data": {
+            "Icon": "/i/021000/021673.png",
+            "Name_de": "Genist-Leinen",
+            "Name_en": "Grade 2 Skybuilders' Hemp",
+            "Name_fr": "Fibres de chanvre de restauration (2e phase)",
+            "Name_ja": "第二次復興用の麻"
+          }
+        },
+        {
+          "id": 29907,
+          "data": {
+            "Icon": "/i/021000/021653.png",
+            "Name_de": "Genist-Stroh",
+            "Name_en": "Grade 2 Skybuilders' Straw",
+            "Name_fr": "Paille de restauration (2e phase)",
+            "Name_ja": "第二次復興用の麦わら"
+          }
+        },
+        {
+          "id": 29916,
+          "data": {
+            "Icon": "/i/021000/021672.png",
+            "Name_de": "Genist-Ranke",
+            "Name_en": "Grade 2 Skybuilders' Vine",
+            "Name_fr": "Sarments de restauration (2e phase)",
+            "Name_ja": "第二次復興用のつる"
+          }
+        },
+        {
+          "id": 29926,
+          "data": {
+            "Icon": "/i/025000/025357.png",
+            "Name_de": "Genist-Weizen",
+            "Name_en": "Grade 2 Skybuilders' Wheat",
+            "Name_fr": "Blé de restauration (2e phase)",
+            "Name_ja": "第二次復興用の小麦"
+          }
+        },
+        {
+          "id": 29936,
+          "data": {
+            "Icon": "/i/025000/025359.png",
+            "Name_de": "Genist-Edelweizen",
+            "Name_en": "Grade 2 Artisanal Skybuilders' Wheat",
+            "Name_fr": "Blé sur commande de restauration (2e phase)",
+            "Name_ja": "第二次復興用の特注小麦"
+          }
+        },
+        {
+          "id": null,
+          "data": {
+            "Icon": "",
+            "Name_de": "",
+            "Name_en": "",
+            "Name_fr": "",
+            "Name_ja": ""
+          }
+        },
+        {
+          "id": null,
+          "data": {
+            "Icon": "",
+            "Name_de": "",
+            "Name_en": "",
+            "Name_fr": "",
+            "Name_ja": ""
+          }
+        },
+        {
+          "id": null,
+          "data": {
+            "Icon": "",
+            "Name_de": "",
+            "Name_en": "",
+            "Name_fr": "",
+            "Name_ja": ""
+          }
+        }
       ]
     },
     {
@@ -62,14 +278,86 @@
       "nodeType": "botanist",
       "category": "logging",
       "items": [
-        29899,
-        29906,
-        29915,
-        29925,
-        29935,
-        null,
-        null,
-        null
+        {
+          "id": 29899,
+          "data": {
+            "Icon": "/i/022000/022637.png",
+            "Name_de": "Genist-Ahornsaft",
+            "Name_en": "Grade 2 Skybuilders' Maple Sap",
+            "Name_fr": "Sirop d'érable de restauration (2e phase)",
+            "Name_ja": "第二次復興用のメープル樹液"
+          }
+        },
+        {
+          "id": 29906,
+          "data": {
+            "Icon": "/i/022000/022611.png",
+            "Name_de": "Genist-Bienenwabe",
+            "Name_en": "Grade 2 Skybuilders' Beehive",
+            "Name_fr": "Fragment d'alvéoles de restauration (2e phase)",
+            "Name_ja": "第二次復興用の蜂の巣"
+          }
+        },
+        {
+          "id": 29915,
+          "data": {
+            "Icon": "/i/021000/021902.png",
+            "Name_de": "Genist-Feder",
+            "Name_en": "Grade 2 Skybuilders' Feather",
+            "Name_fr": "Plume de restauration (2e phase)",
+            "Name_ja": "第二次復興用の羽根"
+          }
+        },
+        {
+          "id": 29925,
+          "data": {
+            "Icon": "/i/022000/022638.png",
+            "Name_de": "Genist-Harz",
+            "Name_en": "Grade 2 Skybuilders' Resin",
+            "Name_fr": "Résine de restauration (2e phase)",
+            "Name_ja": "第二次復興用の樹脂"
+          }
+        },
+        {
+          "id": 29935,
+          "data": {
+            "Icon": "/i/022000/022687.png",
+            "Name_de": "Genist-Edelharz",
+            "Name_en": "Grade 2 Artisanal Skybuilders' Hardened Sap",
+            "Name_fr": "Sève sur commande de restauration (2e phase)",
+            "Name_ja": "第二次復興用の特注樹液塊"
+          }
+        },
+        {
+          "id": null,
+          "data": {
+            "Icon": "",
+            "Name_de": "",
+            "Name_en": "",
+            "Name_fr": "",
+            "Name_ja": ""
+          }
+        },
+        {
+          "id": null,
+          "data": {
+            "Icon": "",
+            "Name_de": "",
+            "Name_en": "",
+            "Name_fr": "",
+            "Name_ja": ""
+          }
+        },
+        {
+          "id": null,
+          "data": {
+            "Icon": "",
+            "Name_de": "",
+            "Name_en": "",
+            "Name_fr": "",
+            "Name_ja": ""
+          }
+        }
       ]
     },
     {
@@ -80,14 +368,86 @@
       "nodeType": "miner",
       "category": "clouded rocky outcrop",
       "items": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        29947,
-        null,
-        null
+        {
+          "id": null,
+          "data": {
+            "Icon": "",
+            "Name_de": "",
+            "Name_en": "",
+            "Name_fr": "",
+            "Name_ja": ""
+          }
+        },
+        {
+          "id": null,
+          "data": {
+            "Icon": "",
+            "Name_de": "",
+            "Name_en": "",
+            "Name_fr": "",
+            "Name_ja": ""
+          }
+        },
+        {
+          "id": null,
+          "data": {
+            "Icon": "",
+            "Name_de": "",
+            "Name_en": "",
+            "Name_fr": "",
+            "Name_ja": ""
+          }
+        },
+        {
+          "id": null,
+          "data": {
+            "Icon": "",
+            "Name_de": "",
+            "Name_en": "",
+            "Name_fr": "",
+            "Name_ja": ""
+          }
+        },
+        {
+          "id": null,
+          "data": {
+            "Icon": "",
+            "Name_de": "",
+            "Name_en": "",
+            "Name_fr": "",
+            "Name_ja": ""
+          }
+        },
+        {
+          "id": 29947,
+          "data": {
+            "Icon": "/i/021000/021481.png",
+            "Name_de": "Genist-Donnerseelenstein",
+            "Name_en": "Grade 2 Skybuilders' Umbral Levinshard",
+            "Name_fr": "Cristal des foudres évanescentes de restauration (2e phase)",
+            "Name_ja": "第二次復興用の幻雷石"
+          }
+        },
+        {
+          "id": null,
+          "data": {
+            "Icon": "",
+            "Name_de": "",
+            "Name_en": "",
+            "Name_fr": "",
+            "Name_ja": ""
+          }
+        },
+        {
+          "id": null,
+          "data": {
+            "Icon": "",
+            "Name_de": "",
+            "Name_en": "",
+            "Name_fr": "",
+            "Name_ja": ""
+          }
+        }
       ]
     }
   ]
