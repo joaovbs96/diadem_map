@@ -34,6 +34,17 @@
       height: 100%;
     }
 
+
+
+    a:link {
+      color: "#ffffff;"
+    }
+
+    a:hover {
+      font-weight: bold;
+      color: "#ffffff;"
+    }
+
     .leaflet-container {
       background-image: url("background.png");
       background-size: cover;
@@ -194,16 +205,20 @@
           for (j = 0; j < 8; j++) {
             htmlContent += '<tr valign="center">\n';
             htmlContent += '<th scope="row">\n';
-            if (this.options.items[j].id != null)
+            if (this.options.items[j].id != null) {
+              htmlContent += '<a href="https://na.finalfantasyxiv.com/lodestone/playguide/db/item/' + this.options.items[j].data.edb + '/" class="eorzeadb_link" target="_blank">';
               htmlContent += '<img src="icons/' + this.options.items[j].id + '.png">\n';
-            else
+              htmlContent += '</a>';
+            } else
               htmlContent += '<img src="icons/empty_slot.png">\n';
             htmlContent += '</th">\n';
 
             htmlContent += '<td>';
-            if (this.options.items[j].id != null)
+            if (this.options.items[j].id != null) {
+              htmlContent += '<a href="https://na.finalfantasyxiv.com/lodestone/playguide/db/item/' + this.options.items[j].data.edb + '/" class="eorzeadb_link" target="_blank">';
               htmlContent += "<h5>" + this.options.items[j].data.Name_en + "</h5>";
-            else
+              htmlContent += '</a>';
+            } else
               htmlContent += "<h5>" + 'Nothing' + "</h5>";
             htmlContent += '</td>\n';
 

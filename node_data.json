@@ -11,6 +11,7 @@
         {
           "id": 29896,
           "data": {
+            "edb": "868b70ee21b",
             "Icon": "/i/021000/021209.png",
             "Name_de": "Genist-Kupfererz",
             "Name_en": "Grade 2 Skybuilders' Ore",
@@ -21,6 +22,7 @@
         {
           "id": 29909,
           "data": {
+            "edb": "868b70ee21b",
             "Icon": "/i/021000/021216.png",
             "Name_de": "Genist-Koboldeisenerz",
             "Name_en": "Grade 2 Skybuilders' Cobalt Ore",
@@ -31,6 +33,7 @@
         {
           "id": 29919,
           "data": {
+            "edb": "868b70ee21b",
             "Icon": "/i/021000/021208.png",
             "Name_de": "Genist-Mythriterz",
             "Name_en": "Grade 2 Skybuilders' Mythrite Ore",
@@ -41,6 +44,7 @@
         {
           "id": 29929,
           "data": {
+            "edb": "868b70ee21b",
             "Icon": "/i/021000/021205.png",
             "Name_de": "Genist-Dunkelstahlerz",
             "Name_en": "Grade 2 Skybuilders' Darksteel Ore",
@@ -51,6 +55,7 @@
         {
           "id": 29939,
           "data": {
+            "edb": "868b70ee21b",
             "Icon": "/i/021000/021224.png",
             "Name_de": "Genist-Edelerz",
             "Name_en": "Grade 2 Artisanal Skybuilders' Cloudstone",
@@ -61,6 +66,7 @@
         {
           "id": null,
           "data": {
+            "edb": "868b70ee21b",
             "Icon": "",
             "Name_de": "",
             "Name_en": "",
@@ -71,6 +77,7 @@
         {
           "id": null,
           "data": {
+            "edb": "868b70ee21b",
             "Icon": "",
             "Name_de": "",
             "Name_en": "",
@@ -81,6 +88,7 @@
         {
           "id": null,
           "data": {
+            "edb": "868b70ee21b",
             "Icon": "",
             "Name_de": "",
             "Name_en": "",
@@ -101,6 +109,7 @@
         {
           "id": null,
           "data": {
+            "edb": "868b70ee21b",
             "Icon": "",
             "Name_de": "",
             "Name_en": "",
@@ -111,6 +120,7 @@
         {
           "id": null,
           "data": {
+            "edb": "868b70ee21b",
             "Icon": "",
             "Name_de": "",
             "Name_en": "",
@@ -121,6 +131,7 @@
         {
           "id": null,
           "data": {
+            "edb": "868b70ee21b",
             "Icon": "",
             "Name_de": "",
             "Name_en": "",
@@ -131,6 +142,7 @@
         {
           "id": null,
           "data": {
+            "edb": "868b70ee21b",
             "Icon": "",
             "Name_de": "",
             "Name_en": "",
@@ -141,6 +153,7 @@
         {
           "id": null,
           "data": {
+            "edb": "868b70ee21b",
             "Icon": "",
             "Name_de": "",
             "Name_en": "",
@@ -151,6 +164,7 @@
         {
           "id": 29944,
           "data": {
+            "edb": "868b70ee21b",
             "Icon": "/i/022000/022422.png",
             "Name_de": "Genist-Sturmseelenscheit",
             "Name_en": "Grade 2 Skybuilders' Umbral Galewood Log",
@@ -161,6 +175,7 @@
         {
           "id": null,
           "data": {
+            "edb": "868b70ee21b",
             "Icon": "",
             "Name_de": "",
             "Name_en": "",
@@ -171,6 +186,7 @@
         {
           "id": null,
           "data": {
+            "edb": "868b70ee21b",
             "Icon": "",
             "Name_de": "",
             "Name_en": "",
@@ -191,6 +207,7 @@
         {
           "id": 29895,
           "data": {
+            "edb": "868b70ee21b",
             "Icon": "/i/021000/021673.png",
             "Name_de": "Genist-Leinen",
             "Name_en": "Grade 2 Skybuilders' Hemp",
@@ -201,6 +218,7 @@
         {
           "id": 29907,
           "data": {
+            "edb": "868b70ee21b",
             "Icon": "/i/021000/021653.png",
             "Name_de": "Genist-Stroh",
             "Name_en": "Grade 2 Skybuilders' Straw",
@@ -211,6 +229,7 @@
         {
           "id": 29916,
           "data": {
+            "edb": "868b70ee21b",
             "Icon": "/i/021000/021672.png",
             "Name_de": "Genist-Ranke",
             "Name_en": "Grade 2 Skybuilders' Vine",
@@ -221,6 +240,7 @@
         {
           "id": 29926,
           "data": {
+            "edb": "868b70ee21b",
             "Icon": "/i/025000/025357.png",
             "Name_de": "Genist-Weizen",
             "Name_en": "Grade 2 Skybuilders' Wheat",
@@ -231,6 +251,7 @@
         {
           "id": 29936,
           "data": {
+            "edb": "868b70ee21b",
             "Icon": "/i/025000/025359.png",
             "Name_de": "Genist-Edelweizen",
             "Name_en": "Grade 2 Artisanal Skybuilders' Wheat",
@@ -241,6 +262,7 @@
         {
           "id": null,
           "data": {
+            "edb": "868b70ee21b",
             "Icon": "",
             "Name_de": "",
             "Name_en": "",
@@ -251,6 +273,7 @@
         {
           "id": null,
           "data": {
+            "edb": "868b70ee21b",
             "Icon": "",
             "Name_de": "",
             "Name_en": "",
@@ -261,6 +284,7 @@
         {
           "id": null,
           "data": {
+            "edb": "868b70ee21b",
             "Icon": "",
             "Name_de": "",
             "Name_en": "",
@@ -281,6 +305,7 @@
         {
           "id": 29899,
           "data": {
+            "edb": "868b70ee21b",
             "Icon": "/i/022000/022637.png",
             "Name_de": "Genist-Ahornsaft",
             "Name_en": "Grade 2 Skybuilders' Maple Sap",
@@ -291,6 +316,7 @@
         {
           "id": 29906,
           "data": {
+            "edb": "868b70ee21b",
             "Icon": "/i/022000/022611.png",
             "Name_de": "Genist-Bienenwabe",
             "Name_en": "Grade 2 Skybuilders' Beehive",
@@ -301,6 +327,7 @@
         {
           "id": 29915,
           "data": {
+            "edb": "868b70ee21b",
             "Icon": "/i/021000/021902.png",
             "Name_de": "Genist-Feder",
             "Name_en": "Grade 2 Skybuilders' Feather",
@@ -311,6 +338,7 @@
         {
           "id": 29925,
           "data": {
+            "edb": "868b70ee21b",
             "Icon": "/i/022000/022638.png",
             "Name_de": "Genist-Harz",
             "Name_en": "Grade 2 Skybuilders' Resin",
@@ -321,6 +349,7 @@
         {
           "id": 29935,
           "data": {
+            "edb": "868b70ee21b",
             "Icon": "/i/022000/022687.png",
             "Name_de": "Genist-Edelharz",
             "Name_en": "Grade 2 Artisanal Skybuilders' Hardened Sap",
@@ -331,6 +360,7 @@
         {
           "id": null,
           "data": {
+            "edb": "868b70ee21b",
             "Icon": "",
             "Name_de": "",
             "Name_en": "",
@@ -341,6 +371,7 @@
         {
           "id": null,
           "data": {
+            "edb": "868b70ee21b",
             "Icon": "",
             "Name_de": "",
             "Name_en": "",
@@ -351,6 +382,7 @@
         {
           "id": null,
           "data": {
+            "edb": "868b70ee21b",
             "Icon": "",
             "Name_de": "",
             "Name_en": "",
@@ -371,6 +403,7 @@
         {
           "id": null,
           "data": {
+            "edb": "868b70ee21b",
             "Icon": "",
             "Name_de": "",
             "Name_en": "",
@@ -381,6 +414,7 @@
         {
           "id": null,
           "data": {
+            "edb": "868b70ee21b",
             "Icon": "",
             "Name_de": "",
             "Name_en": "",
@@ -391,6 +425,7 @@
         {
           "id": null,
           "data": {
+            "edb": "868b70ee21b",
             "Icon": "",
             "Name_de": "",
             "Name_en": "",
@@ -401,6 +436,7 @@
         {
           "id": null,
           "data": {
+            "edb": "868b70ee21b",
             "Icon": "",
             "Name_de": "",
             "Name_en": "",
@@ -411,6 +447,7 @@
         {
           "id": null,
           "data": {
+            "edb": "868b70ee21b",
             "Icon": "",
             "Name_de": "",
             "Name_en": "",
@@ -421,6 +458,7 @@
         {
           "id": 29947,
           "data": {
+            "edb": "868b70ee21b",
             "Icon": "/i/021000/021481.png",
             "Name_de": "Genist-Donnerseelenstein",
             "Name_en": "Grade 2 Skybuilders' Umbral Levinshard",
@@ -431,6 +469,7 @@
         {
           "id": null,
           "data": {
+            "edb": "868b70ee21b",
             "Icon": "",
             "Name_de": "",
             "Name_en": "",
@@ -441,6 +480,7 @@
         {
           "id": null,
           "data": {
+            "edb": "868b70ee21b",
             "Icon": "",
             "Name_de": "",
             "Name_en": "",
